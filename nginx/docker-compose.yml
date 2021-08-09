@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  nginx:
+    image: nginx:latest
+    volumes:
+    - ./nginx-web.conf:/etc/nginx/conf.d/nginx-web.conf
+    - ./index.html:/var/www/web/index.html
+    ports:
+    - 9090:9090
