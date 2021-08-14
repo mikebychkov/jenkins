@@ -25,5 +25,12 @@ services:
     - $PWD/db_data:/var/lib/mysql
     networks:
     - net
+  web-host:
+    container_name: web-host
+    image: centos7-web
+    ports:
+    - 9090:9090
+    networks:
+    - net
 networks:
   net:
